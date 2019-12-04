@@ -4,7 +4,7 @@ function a()
 {
   	s=document.getElementById('search').value
   	s1=s.substring(0,1).toUpperCase()+s.substring(1,s.length);
-	var url="https://developers.zomato.com/api/v2.1/locations?query="+s1+"&apikey=f1d3f307c8c6887ae10fb54d513c5584"
+	var url="https://developers.zomato.com/api/v2.1/locations?query="+s1+"&apikey=0550024dabc7c421af577802b1ec99d1"
 	var xhr= new XMLHttpRequest()
 	xhr.open('GET',url)
 	xhr.onreadystatechange=test
@@ -17,7 +17,7 @@ function a()
 			var res_data=JSON.parse(this.responseText)
 			e=res_data.location_suggestions[0].city_id
 			console.log(e)
-			var url1='https://developers.zomato.com/api/v2.1/search?entity_id='+e+'&entity_type=city&apikey=f1d3f307c8c6887ae10fb54d513c5584'	
+			var url1='https://developers.zomato.com/api/v2.1/search?entity_id='+e+'&entity_type=city&apikey=0550024dabc7c421af577802b1ec99d1'	
 			var xhr1=new XMLHttpRequest()
 			xhr1.open('GET',url1)
 			xhr1.onreadystatechange=test1
